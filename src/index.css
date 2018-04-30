@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+button {
+  padding: 10px;
+  background: white;
+  border: 1px solid #b2bec3;
+  color: #2d3436;
+  padding-left: 25px;
+  padding-right: 25px;
+  outline: 0;
+  transition: 0.2s;
+  font-size: 15px;
+}
+button:hover {
+  background: #0984e3;
+  color: white;
+  border: 1px solid #b2bec3;
+}
+h1 {
+  font-size: 35px;
+  font-family: Arial;
+  transition: 0.2s;
+}
+textarea {
+  font-size: 35px;
+  font-family: Arial;
+}
+.container {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 50px;
+  transition: 0.2s;
+      border: 1px solid #bdc3c7;
+}
+.container:hover {
+  cursor: pointer;
+}
+p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  margin-bottom: 10px;
+    transition: 0.2s;
+    font-size: 15px;
+}
+.view {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-left: none;
+  border-right: none;
+  transition: 0.2s;
+}
+.view:hover {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.reading p {
+  background: #ecf0f1;
+  padding: 15px;
+  font-size: 25px;
+  overflow: auto;
+  white-space: normal;
+}
+.tag {
+  color: #95a5a6;
+  display: block;
+  margin-top: 10px;
+  padding: 5px;
+}
+span {
+  color: #34495e;
+  display: block;
+  padding: 5px;
+}
+.rename {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 0px;
+}
