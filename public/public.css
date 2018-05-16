@@ -1,0 +1,39 @@
+#head {
+  background: #5f27cd;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2s;
+}
+body, html {
+  padding: 0;
+  margin: 0;
+  background: #ecf0f1;
+  margin-top: 100px;
+}
+.logo {
+  display: inline-block;
+  color: white;
+  padding: 20px;
+  margin-left: 50px;
+  /* font-family: 'Kaushan Script', cursive; */
+  font-family: Tahoma;
+}
+.item {
+  display: inline-block;
+  padding: 20px;
+  float: right;
+  /* margin-right: 50px; */
+  width: 130px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.item:hover {
+  background: white;
+  color: black;
+}
+.i {
+
+}

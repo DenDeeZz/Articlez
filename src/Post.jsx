@@ -11,7 +11,9 @@ class Post extends Component {
       editing: false,
       content: this.props.children,
       cont: this.props.children,
-      reading: false
+      reading: false,
+      comments: [],
+      username: 'Guest',
     }
   }
   handleMode = () => {
@@ -42,17 +44,49 @@ class Post extends Component {
       </div>
     )
   }
+  addComment = (e) => {
+    if(e.key == 'Enter') {
+      e.preventDefault();
+    this.setState({
+      comments: [...this.state.comments, {n: this.state.username, p: this.refs.comment_value.value}]
+    })
+    this.refs.comment_value.value = '';
+  }
+  }
   normalMode() {
     let time = new Date();
     let timeFormat = time.getHours() + ':' + time.getMinutes();
     return(
+      <div>
       <div className='container'>
       <h1>{this.state.content}</h1>
       <p>{this.props.content}</p> <br />
       <button className='rename' onClick={this.handleMode}>E</button>
       <button onClick={this.handleRead}>Show more</button>
-      <span className='tag'>{this.props.tag}</span>
+      <span className='tag spaner'>{this.props.tag}</span>
       <span>{timeFormat}</span>
+      </div>
+      <div className='_comments'>
+        {this.state.comments.map((item, i) => {
+          return(
+            <div key={i}>
+            <hr />
+            <span className='_username'>
+            {item.n}:
+              </span>
+               <span className='_content'>
+               {item.p}
+               </span>
+               <span className='_time'>
+               {timeFormat}
+               </span>
+               </div>
+             )})
+        }
+      </div>
+      <div className='_field-div' onKeyDown={(e) => this.addComment(e)}>
+      <textarea ref='comment_value' rows='1' className='_field' placeholder='Type anything and press enter'></textarea>
+      </div>
       </div>
     )
   }
